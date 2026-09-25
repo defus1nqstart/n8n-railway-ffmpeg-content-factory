@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     g++ \
     && rm -rf /var/lib/apt/lists/*
 
-RUN npm install -g n8n@2.17.7 && npm cache clean --force
+RUN npm install -g n8n@2.17.7 exceljs && npm cache clean --force
 
 RUN mkdir -p /home/node/.n8n /home/node/.cache/n8n /home/node/.n8n-files \
     && chown -R node:node /home/node
